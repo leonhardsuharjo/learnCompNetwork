@@ -2,4 +2,4 @@ Computer Network exam prep
 
 I. Plan 
 
-* Finalize subject notes
+* Finalize subject notes perp
