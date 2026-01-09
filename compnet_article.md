@@ -46,11 +46,14 @@ Lets start by understanding the context information, what is essentially going o
 
 **Section 4 = Real world implementation*
 
-* Video streaming = uses udp
-* online games = uses udp
-* 
+* Video streaming, online games = uses udp
+* File transfer / email = uses TCP (mandatory)
+* Discord, Skype, VoIP (voice over internet protocol) = uses UDP for voice, TCP for setup/control
 
 **Section 5 = When to use each of them*
+
+* make decision tree
+* QUIC usage
 
 **Section 6 = Conclusion*
 
