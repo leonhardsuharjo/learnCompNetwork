@@ -3,7 +3,7 @@ Computer Network exam prep
 I. Plan
 
 * [X] Finalize subject notes perp
-* [ ] recap themes and topics involved
+* [X] recap themes and topics involved
 * [ ] review all books OR revised notes
 * [ ] Finish review sample questions
 * [ ] [optional] work on medium article
@@ -67,4 +67,32 @@ II. Course structure
     * openflow
     * middleboxes
   * Internet architecture
-*
+* Chapter four part B -- Internet protocol specific
+  * IPv4, IPv6,
+  * Reserved address
+  * Address classes
+  * Subnet mask
+  * Boolean algebra for IP address
+* Chapter five -- network layer control plane -- router to router communication
+  * introdudction
+  * routing protocols
+    * link state
+    * distance vector
+  * intra-ISP routing: OSPF
+  * Routing among ISPs : BGP
+  * SDN control plane
+  * Internet control message protocol
+  * Network management, config
+    * SNMP and Netconf/YANG
+* Chapter six -- Link layer and LAN
+  * introduction
+  * error detection and correction
+  * multiple access protocols
+  * LAN (Local area network)
+    * addressing
+    * ethernet
+    * switches
+    * VLAN
+  * link virtualization: MPLS
+  * Data center networking
+  * web request recap
