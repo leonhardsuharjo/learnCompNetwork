@@ -1,1 +1,1 @@
-Medium article proposal = TCP vs UDP, comparing the two
+Medium article proposal = TCP & UDP, comparing the two in analogy
