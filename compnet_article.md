@@ -1,12 +1,16 @@
-Medium article proposal 
+Medium article proposal
 
-Theme = Demonstrate learning in computer network 
+Theme = Demonstrate learning in computer network
 
-Target = min 1000 - 1500 words
+Target = min 5 min read, 1000 - 1500 words
 
-photo from unsplash 
+photo from unsplash
 
-Main points 
+Constraints = 
+
+* how to connect/frame from basic knowledge of compnetwork to tcp/udp specific because the topic is really wide
+
+Main points
 
 * Fundamental distinction with real-world applications
 * Examples: Netflix (UDP), Gmail (TCP), Discord (hybrid)
@@ -19,16 +23,16 @@ Subtitle = When to choose each and why it matters
 
 My first article of 2026:)
 
-Recently, I have been preparing for my university exam subject, computer networks. During it, I encountered a topic I found interesting, the Transmission Control Protocol (TCP) and User Datagram Protocol (UDP). 
+Recently, I have been preparing for my university exam subject, computer networks. During it, I encountered a topic I found interesting, the Transmission Control Protocol (TCP) and User Datagram Protocol (UDP).
 
-As this two terms are among the most crucial terms of computer network, this article will try to discuss the two, from my learning perspective. 
+As this two terms are among the most crucial terms of computer network, this article will try to discuss the two, from my learning perspective.
 
 **Section 1 = General idea and fundamental difference*
 
 * address which layer tcp and udp belongs to, some basic knowledge of computer network
 * explain in analogy = registered letter vs postcard
 
-Lets start by understanding the context information, what is essentially going on. So in computer networks, we have the activity of information being send from one end to another. The subject of computer network studies how these 'information' in the form of data packets travels through different network layers. 
+Lets start by understanding the context information, what is essentially going on. So in computer networks, we have the activity of information being send from one end to another. The subject of computer network studies how these 'information' in the form of data packets travels through different network layers.
 
 **Section 2 = TCP deep dive*
 
@@ -52,9 +56,18 @@ Lets start by understanding the context information, what is essentially going o
 
 **Section 5 = When to use each of them*
 
-* make decision tree
-* QUIC usage
+* make decision tree of individually when to use TCP and UDP
+* when its a complex choice
+* QUIC usage (what is QUIC)
 
 **Section 6 = Conclusion*
+
+Learning Value
+
+- Clarifies one of networking's most important distinctions
+
+- Explains real-world engineering decisions
+
+- Helps with exam preparation (likely on your exam!)
 
 Hopefully, this article could help potential readers to prepare for their computer network exams, as it did for me.
