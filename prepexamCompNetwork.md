@@ -101,58 +101,147 @@ Deep review 12/01/26
 
 Computer networks enable communication between devices through standardized protocols and infrastructure.
 
-1. Chapter 1: Network fundamentals =
-   1. chap 1.1 architecture
-      1. Network Edge = Access Networks
-         1. act as end systems like computers or mobile devices; serve as data destinations; connected through access networks to the core internet
-      2. Network Core = Responsible for routing packets between networks
-         1. Mesh of interconnected routers and links, uses packet switching
-      3. Network comm path = direct (same subnet), routed (through router to router), multihop (mutliple routers)
-   2. chap 1.2 switching
-      1. packet switching == Breaking messages into packets and transmitting them individually through the network. -- publicly used network
-      2. Circuit switching == End-to-end resources allocated for transmission between source and destination. -- one dedicated path
-         1. connection established before transmission; resources dedicated to a single activity, no data congestion; diasdv cannot manage many simulatenous data transfer due to resource dedication
-   3. Chap 1.3 network performance metrics and terms
-      1. Processing delay = time to examine packet header
-      2. Queueing delay = time packet waits in output queue
-      3. Transmission delay = time to push packet bits onto link; formula = PacketLength / LinkRate
-      4. Propagation delay = time for signal to travel physical medium
-      5. Packet loss = occur when packet arrives at full buffer, loss probability increase with traffic intensity
-      6. Traffic intensity = Ratio of average packet arrival rate to transmission rate
-      7. Throughput = Rate at which bits are received (bits/time unit)
-   4. Chap 1.4 internet terms
-      1. RFC Request for Comments = Documents specifying Internet protocols and standards
-      2. IETF (Internet Engineering Task Force) = Organization that develops Internet standards
-2. Chapter two -- network model and architecture
-   1. chap 2.1 ISO/OSI Reference Model (7 Layers) -- down to top -- sometimes can be 5 layers
+Chapter 1: Network fundamentals =
 
-      1. Physical = Transmission of raw bits over physical medium, hardware
-      2. Data link = Frame formatting and delivery between adjacent nodes, Hardware addressing (MAC addresses)
-      3. Network = Logical addressing (IP addresses) and routing, Routing algorithms and path selection like ipv6
-      4. Transport = Process-to-process communication, like **TCP, UDP**
-      5. Session (not in internet stack) = Synchronization and dialogue control, implemented in application layer if needed
-      6. Presentation (not in internet stack) = Compression, encryption/decryption
-      7. Application = Network services for end users and applications, example HTTP
-   2. Chap 2.2 TCP IP reference model (simplified model) -- top to down
+1. chap 1.1 architecture
+   1. Network Edge = Access Networks
+      1. act as end systems like computers or mobile devices; serve as data destinations; connected through access networks to the core internet
+   2. Network Core = Responsible for routing packets between networks
+      1. Mesh of interconnected routers and links, uses packet switching
+   3. Network comm path = direct (same subnet), routed (through router to router), multihop (mutliple routers)
+2. chap 1.2 switching
+   1. packet switching == Breaking messages into packets and transmitting them individually through the network. -- publicly used network
+   2. Circuit switching == End-to-end resources allocated for transmission between source and destination. -- one dedicated path
+      1. connection established before transmission; resources dedicated to a single activity, no data congestion; diasdv cannot manage many simulatenous data transfer due to resource dedication
+3. Chap 1.3 network performance metrics and terms
+   1. Processing delay = time to examine packet header
+   2. Queueing delay = time packet waits in output queue
+   3. Transmission delay = time to push packet bits onto link; formula = PacketLength / LinkRate
+   4. Propagation delay = time for signal to travel physical medium
+   5. Packet loss = occur when packet arrives at full buffer, loss probability increase with traffic intensity
+   6. Traffic intensity = Ratio of average packet arrival rate to transmission rate
+   7. Throughput = Rate at which bits are received (bits/time unit)
+4. Chap 1.4 internet terms
+   1. RFC Request for Comments = Documents specifying Internet protocols and standards
+   2. IETF (Internet Engineering Task Force) = Organization that develops Internet standards
 
-      1. application
-      2. transport
-      3. Internet (network)
-      4. Link
-      5. physical
-   3. TCP ip model has less layers, more reliable/tested, and the de facto standard  with less strict boundaries. while osi layer is more theoretical, less reliable
-3. Chapter three Network Transmission and Configuration
-   1. Chap 3.1 transmission mode
-      1. Simplex (Unidirectional) = Communication in one direction only, One device transmits, other only receives, Examples: Keyboard-monitor
-      2. Half-Duplex (Bidirectional, Not Simultaneous) = Both devices can transmit and receive, but not simultaneously, Devices take turns transmitting, example walkie talkie
-      3. Full-Duplex (Bidirectional, Simultaneous) = Both devices transmit and receive simultaneously, Capacity divided between two directions, example modern phone
-   2. Chap 3.2 Line config
+Chapter two -- network model and architecture
+
+1. chap 2.1 ISO/OSI Reference Model (7 Layers) -- down to top -- sometimes can be 5 layers
+
+   1. Physical = Transmission of raw bits over physical medium, hardware
+   2. Data link = Frame formatting and delivery between adjacent nodes, Hardware addressing (MAC addresses)
+   3. Network = Logical addressing (IP addresses) and routing, Routing algorithms and path selection like ipv6
+   4. Transport = Process-to-process communication, like **TCP, UDP**
+   5. Session (not in internet stack) = Synchronization and dialogue control, implemented in application layer if needed
+   6. Presentation (not in internet stack) = Compression, encryption/decryption
+   7. Application = Network services for end users and applications, example HTTP
+2. Chap 2.2 TCP IP reference model (simplified model) -- top to down
+
+   1. application
+   2. transport
+   3. Internet (network)
+   4. Link
+   5. physical
+3. TCP ip model has less layers, more reliable/tested, and the de facto standard  with less strict boundaries. while osi layer is more theoretical, less reliable
+
+Chapter three Network Transmission and Configuration
+
+1. Chap 3.1 transmission mode
+   1. Simplex (Unidirectional) = Communication in one direction only, One device transmits, other only receives, Examples: Keyboard-monitor
+   2. Half-Duplex (Bidirectional, Not Simultaneous) = Both devices can transmit and receive, but not simultaneously, Devices take turns transmitting, example walkie talkie
+   3. Full-Duplex (Bidirectional, Simultaneous) = Both devices transmit and receive simultaneously, Capacity divided between two directions, example modern phone
+2. Chap 3.2 Line config -- [**skip first to key chapters]**
+
+Chapter twelve - Transport layer overview
+
+12.1 Transport layer functions
+
+1. Definition of trans layer = Provides process-to-process communication
+2. Key difference: network layer is host to host while transport layer is process to process
+
+12.2 multiplexing and demultiplexing
+
+1. multiplexing (sender side) = collecting data from sockets, one host handle multiple apps simulatenously
+2. demultiplexing (reciever side) =  Delivering received segments to correct socket/application
+   1. Types of demultiplexing
+      1. Connectionless (UDP) =
+
+         1. Form = Source IP, Source Port, Destination IP, Destination Port
+         2. stateless, no connection setup,
+      2. connection oriented (TCP) =
+
+         1. Form = same four fields
+         2. Connectionbased, can have multiple connections to same port
+
+12.3 Sockets
+
+1. Socket concept  = Endpoint of network communication, Identified by (IP address, Port number)
+2. Socket types =
+   1. Stream socket = TCP, reliable, ordered delivery
+   2. Datagram socket = UDP, unreliable, unordered
+
+Chapter 13 -- **UDP (user datagram protocol) specific**
+
+1. main characteristic = unreliable data transfer, connectionless, min overhead, fast delivery, no congestion control
+2. Segment strucutre = Source Port (16 bits) | Destination Port (16 bits) Length (16 bits) | Checksum (16 bits) [Application data]
+
+   1. - **Source Port**: Sending process's port
+   2. - **Destination Port**: Receiving process's port
+   3. - **Length**: Header + data length
+   4. - **Checksum**: Error detection (optional)
+3. Checksum (specific) = purpose, to detect *bit errors* in segment
+
+   1. process = sender add 16 bit words, take one's complement (flip bits), include in checksum field, if all result is 1, no error detected.
+4. UDP usage =
+
+   1. Streaming media = Audio/video where occasional loss acceptable
+   2. **Online Gaming**: Low latency more important than reliability
+   3. **DNS Queries**: Simple request-response
+   4. **IoT Sensors**: Small data bursts, high volume
+5. **Advantage**: No connection overhead, lower latency
+
+Chapter 14 -- TCP (Transmission Control Protocol) 
+
+1. main charac = reliable data transfer, connection oriented (setup, data, teardown), Flow control (receiver controls sender), - Congestion control (sender adapts to network), - Ordered delivery, relatively complex
+2. Segment format =
+   1. **Port Numbers**: Source and destination process ports
+   2. **Sequence Number**:
+   3. - Position of first data byte in segment
+   4. - Sender increments for each byte sent
+   5. - Prevents duplicate/out-of-order delivery
+   6. **Acknowledgement Number**:
+   7. - Next expected sequence number
+   8. - Receiver acknowledges reception
+   9. - Cumulative ACK: Acknowledges all bytes up to this number
+   10. * **Header Length**: Variable length header
+   11. **Flags**:
+   12. - **SYN**: Synchronize (connection setup)
+   13. - **ACK**: Acknowledgement valid
+   14. - **FIN**: Finish (connection close)
+   15. - **RST**: Reset connection
+   16. - **PSH**: Push data to application
+   17. - **URG**: Urgent data
+   18. **Receive Window**: Flow control
+   19. - How much data receiver can accept
+   20. - Sender shouldn't exceed this
+   21. **Checksum**: Error detection (mandatory in TCP)
+3. Connection management
+   1. Three way handshake
+      1. Syn = Client announces readiness to connect
+      2. Syn-ack = Server confirms and sends own sequence
+      3. Ack = Client confirm connection established
+
+
+
+########
 
 Chapter list AI PDF =
 
 * Computer Networks: Comprehensive Study Guide
   * Introduction to Computer Networking
   * **Chapter 1: Network Fundamentals**
+
     * 1.1 Network Architecture Overview
       * Network Edge and Core
       * Network Communication Paths
@@ -166,10 +255,12 @@ Chapter list AI PDF =
       * Throughput
     * 1.4 Internet Standards
   * > **Chapter 2: Network Models and Architectur**e* 2.1 ISO/OSI Reference Model (7 Layers)
+    >
     > * 2.2 TCP/IP Reference Model (4-5 Layers)
     > * 2.3 OSI vs TCP/IP Comparison
     >
   * Chapter 3: Network Transmission and Configuration
+
     * 3.1 Transmission Modes
       * Simplex (Unidirectional)
       * Half-Duplex (Bidirectional, Not Simultaneous)
@@ -182,17 +273,20 @@ Chapter list AI PDF =
       * Broadcast (One-to-All)
       * Multicast (One-to-Many)
   * Chapter 4: Network Topologies
+
     * 4.1 Mesh Topology
     * 4.2 Star Topology
     * 4.3 Bus Topology
     * 4.4 Ring Topology
     * 4.5 Tree Topology
   * Chapter 5: Types of Networks
+
     * 5.1 Local Area Network (LAN)
     * 5.2 Metropolitan Area Network (MAN)
     * 5.3 Wide Area Network (WAN)
     * 5.4 Other Network Types
   * Chapter 6: The Internet and Network Access
+
     * 6.1 Internet Service Providers (ISPs)
     * 6.2 Access Network Technologies
       * Cable-Based Access (HFC - Hybrid Fiber-Coax)
@@ -200,6 +294,7 @@ Chapter list AI PDF =
       * Wireless Access
     * 6.3 Home Network Architecture
   * Chapter 7: Physical Media
+
     * 7.1 Directed Media (Guided)
       * Twisted-Pair Cable
       * Coaxial Cable
@@ -208,6 +303,7 @@ Chapter list AI PDF =
       * Terrestrial Radio
       * Characteristics of Wireless
   * **Chapter 8: Application Layer Fundamentals**
+
     * 8.1 Application Architecture Models
       * Client-Server Architecture
       * Peer-to-Peer (P2P) Architecture
@@ -218,6 +314,7 @@ Chapter list AI PDF =
       * Identifying Processes
     * 8.4 Application-Layer Protocols
   * **Chapter 9: Hypertext Transfer Protocol (HTTP)**
+
     * 9.1 Web Fundamentals
     * 9.2 HTTP Overview
     * 9.3 HTTP Connections
@@ -229,10 +326,12 @@ Chapter list AI PDF =
     * 9.7 Maintaining State: Cookies
     * 9.8 Web Caching (Proxy Servers)
   * **Chapter 10: Email Systems**
+
     * 10.1 Email Architecture
     * 10.2 SMTP Protocol
     * 10.3 Email Retrieval: IMAP
   * **Chapter 11: Domain Name System (DNS)**
+
     * 11.1 DNS Overview
     * 11.2 DNS Services
     * 11.3 Why Not Centralize DNS?
@@ -241,17 +340,20 @@ Chapter list AI PDF =
     * 11.6 DNS Protocol Messages
     * 11.7 DNS Security Issues
   * > **Chapter 12: Transport Layer Overview*** 12.1 Transport Layer Functions
+    >
     > * 12.2 Multiplexing and Demultiplexing
     >   * Multiplexing (Sender Side)
     >   * Demultiplexing (Receiver Side)
     > * 12.3 Sockets
     >
   * > **Chapter 13: UDP (User Datagram Protocol**)* 13.1 UDP Overview
+    >
     > * 13.2 UDP Segment Structure
     > * 13.3 Checksum (Error Detection)
     > * 13.4 UDP Applications
     >
   * > **Chapter 14: TCP (Transmission Control Protoco**l)* 14.1 TCP Overview
+    >
     > * 14.2 TCP Segment Structure
     > * 14.3 TCP Connection Management
     >   * Three-Way Handshake (Connection Setup)
@@ -260,6 +362,7 @@ Chapter list AI PDF =
     > * 14.5 Flow Control
     >
   * > **Chapter 15: Congestion Control*** 15.1 Congestion Overview
+    >
     > * 15.2 Congestion Control Approaches
     >   * End-to-End Congestion Control
     >   * Network-Assisted Congestion Control
@@ -268,6 +371,7 @@ Chapter list AI PDF =
     > * 15.5 Fairness
     >
   * Chapter 16: Network Layer - Routing and Forwarding
+
     * 16.1 Network Layer Functions
       * Forwarding (Data Plane)
       * Routing (Control Plane)
@@ -280,29 +384,35 @@ Chapter list AI PDF =
       * Switching via Interconnection Network
     * 16.6 Output Port Processing
   * Chapter 17: IP Protocol and Addressing
+
     * 17.1 IP Datagram Format
     * 17.2 IP Addressing
     * 17.3 IP Address Classes (Legacy)
     * 17.4 Subnet Mask and CIDR
   * Chapter 18: DHCP (Dynamic Host Configuration Protocol)
+
     * 18.1 DHCP Overview
     * 18.2 DHCP Process
     * 18.3 DHCP in Home Networks
   * Chapter 19: Network Address Translation (NAT)
+
     * 19.1 NAT Overview
     * 19.2 NAT Implementation
     * 19.3 NAT Advantages
     * 19.4 NAT Controversies
   * Chapter 20: IPv6
+
     * 20.1 IPv6 Motivation
     * 20.2 IPv6 Datagram Format
     * 20.3 IPv6 Adoption
     * 20.4 IPv6 Transition: Tunneling
   * Chapter 21: Link Layer Fundamentals
+
     * 21.1 Link Layer Services
     * 21.2 MAC Addresses
     * 21.3 ARP (Address Resolution Protocol)
   * Chapter 22: Securing Computer Networks
+
     * 22.1 Cybersecurity Threats
     * 22.2 Security Defenses
   * Conclusion
