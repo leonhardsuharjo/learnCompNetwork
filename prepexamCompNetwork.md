@@ -205,6 +205,7 @@ Chapter 14 -- TCP (Transmission Control Protocol)
 
 1. main charac = reliable data transfer, connection oriented (setup, data, teardown), Flow control (receiver controls sender), - Congestion control (sender adapts to network), - Ordered delivery, relatively complex
 2. Segment format =
+
    1. **Port Numbers**: Source and destination process ports
    2. **Sequence Number**:
    3. - Position of first data byte in segment
@@ -227,11 +228,22 @@ Chapter 14 -- TCP (Transmission Control Protocol)
    20. - Sender shouldn't exceed this
    21. **Checksum**: Error detection (mandatory in TCP)
 3. Connection management
+
    1. Three way handshake
       1. Syn = Client announces readiness to connect
       2. Syn-ack = Server confirms and sends own sequence
       3. Ack = Client confirm connection established
+   2. TCP Connection termination (4-Way Handshake)
+      1. * Client sends FIN (finish flag)
+      2. * Server acknowledges with ACK
+      3. * Server sends its FIN
+      4. * Client acknowledges with ACK
+      5. Connection closed gracefully
+4. Reliable data transfer in TCP mechanism
 
+   1. Sequence number
+   2. Acknowledgement
+   3. Retransmission
 
 
 ########
