@@ -201,7 +201,7 @@ Chapter 13 -- **UDP (user datagram protocol) specific**
    4. **IoT Sensors**: Small data bursts, high volume
 5. **Advantage**: No connection overhead, lower latency
 
-Chapter 14 -- TCP (Transmission Control Protocol) 
+Chapter 14 -- TCP (Transmission Control Protocol)
 
 1. main charac = reliable data transfer, connection oriented (setup, data, teardown), Flow control (receiver controls sender), - Congestion control (sender adapts to network), - Ordered delivery, relatively complex
 2. Segment format =
@@ -241,10 +241,21 @@ Chapter 14 -- TCP (Transmission Control Protocol)
       5. Connection closed gracefully
 4. Reliable data transfer in TCP mechanism
 
-   1. Sequence number
-   2. Acknowledgement
-   3. Retransmission
+   1. Sequence number = detect out of order segment and duplicate segments
+   2. Acknowledgement = receiver confirm reception
+   3. Retransmission = if no ack received after timeout, retransmit
+5. Flow control = when receiver limit/control senders rate to not be overwhelmed, done by indicating how much data can the receiver accept in the ACK message.
 
+Chapter 15 -- congestion control 
+
+1. Congestion = Too many sources sending too much data too fast for network to handle
+2. Aproaches of cong control = endtoend (senderside), network-assisted (using router's help, used in TCP)
+3. TCP congestion control -- Additive Increase, Multiplicative Decrease (AIMD) = automatically decrease or increase **throughput** depending when no packet loss detected or when congestion detected, congestion == packet loss; linear increase and **sharp decrease**
+4. TCP slow start = start with small throughput, increase slowly
+5. TCP fairness = muultiple flow share bandwidth fairly; UDP is not fair
+
+
+---
 
 ########
 
