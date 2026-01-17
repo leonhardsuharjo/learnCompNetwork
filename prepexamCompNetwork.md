@@ -4,8 +4,8 @@ I. Plan
 
 * [X] Finalize subject notes perp
 * [X] recap themes and topics involved
-* [ ] review all books OR revised notes
-* [ ] Finish review sample questions
+* [X] review all books OR revised notes -- only essential chapters reviewed done
+* [ ] Finish review sample questions -- total 150 sample questions
 * [ ] [optional] work on medium article
 
 Exam first date = 19 January 2026
@@ -96,6 +96,8 @@ II. Course structure
   * link virtualization: MPLS
   * Data center networking
   * web request recap
+
+---
 
 Deep review 12/01/26
 
@@ -246,7 +248,7 @@ Chapter 14 -- TCP (Transmission Control Protocol)
    3. Retransmission = if no ack received after timeout, retransmit
 5. Flow control = when receiver limit/control senders rate to not be overwhelmed, done by indicating how much data can the receiver accept in the ACK message.
 
-Chapter 15 -- congestion control 
+Chapter 15 -- congestion control
 
 1. Congestion = Too many sources sending too much data too fast for network to handle
 2. Aproaches of cong control = endtoend (senderside), network-assisted (using router's help, used in TCP)
@@ -254,8 +256,35 @@ Chapter 15 -- congestion control
 4. TCP slow start = start with small throughput, increase slowly
 5. TCP fairness = muultiple flow share bandwidth fairly; UDP is not fair
 
+---
+
+Question review 17/01/25
+
+Batches upload wont work, need to review individually 
+
+Whatsapp direct review with perplexity, WIT = what is true when talking about [concept] question type
+
+1. Taking turns protocol on MAC protocol true statement = Master node invites other nodes to transmit in turn
+2. WIT direct broadcast = direct broadcast is useful when a device in one network wants to transfer packet stream to all the devices over the other network
+3. WIT Client server = client server is when computers provide resources and offer services to other computers
+4. WIT direct broadcast = Direct broadcast sends packets to all devices on a different network (subnet broadcast across routers), often used for network discovery
+5. in BGP (border gateway protocol), which attribute identifies the router within the AS (autonomous systems) for forwarding packet to destination = the NEXT-HOP attribute, where it specifies the IP address of the next router that should receive the packet to reach the destination.
+6. WIT UDP = it is a connectionless protocol
+7. which application layer protocol used to support email = SMTP
+8. What is subnet mask used for (in IP addressing) = to define network and host portions of an address
+9. How to send http request to create pizza = The code with r = requests.post(url, data=body, headers=headers) (the one using **POST** method with pathname='/products', JSON body {"pizza": 1, "water": 6}, and Content-Type: application/json headers)
+10. Primary use of djikstra algorithm = Calculate least cost path from a source node to all other nodes
+11. Application layer protocol to download an email from mailbox server to client = POP (used for retrieving/downloading mail to the client)
+12. what is Throughput = rate (bits/time unit) at which bits are being sent from sender to receiver
+13. What is purpose of multiplexing in **transport** layer = To handle data from multiple sockets for transmission
+14. what information does an IMCP message when reporting error = Type, code, and the first 8 bytes of the IP datagram causing the error.
+15. What is encapsulated within a frame at link layer = IP datagram ; At the link layer, a frame carries the network-layer packet (an IP datagram) as its payload.
+16. 
+
 
 ---
+
+
 
 ########
 
