@@ -129,7 +129,7 @@ Chapter 1: Network fundamentals =
 
 Chapter two -- network model and architecture
 
-1. chap 2.1 ISO/OSI Reference Model (7 Layers) -- down to top -- sometimes can be 5 layers
+1. chap 2.1 **ISO/OSI Reference Model** (7 Layers) -- down to top -- sometimes can be 5 layers
 
    1. Physical = Transmission of raw bits over physical medium, hardware
    2. Data link = Frame formatting and delivery between adjacent nodes, Hardware addressing (MAC addresses)
@@ -138,7 +138,7 @@ Chapter two -- network model and architecture
    5. Session (not in internet stack) = Synchronization and dialogue control, implemented in application layer if needed
    6. Presentation (not in internet stack) = Compression, encryption/decryption
    7. Application = Network services for end users and applications, example HTTP
-2. Chap 2.2 TCP IP reference model (simplified model) -- top to down
+2. Chap 2.2 **TCP IP reference model** (simplified model) -- top to down
 
    1. application
    2. transport
@@ -262,7 +262,7 @@ Question review 17/01/25
 
 Batches upload wont work, need to review individually 
 
-Whatsapp direct review with perplexity, WIT = what is true when talking about [concept] question type
+Whatsapp direct review with perplexity, WIT = what is true when talking about [concept] question type, WITF = what is the function 
 
 1. Taking turns protocol on MAC protocol true statement = Master node invites other nodes to transmit in turn
 2. WIT direct broadcast = direct broadcast is useful when a device in one network wants to transfer packet stream to all the devices over the other network
@@ -278,8 +278,28 @@ Whatsapp direct review with perplexity, WIT = what is true when talking about [c
 12. what is Throughput = rate (bits/time unit) at which bits are being sent from sender to receiver
 13. What is purpose of multiplexing in **transport** layer = To handle data from multiple sockets for transmission
 14. what information does an IMCP message when reporting error = Type, code, and the first 8 bytes of the IP datagram causing the error.
-15. What is encapsulated within a frame at link layer = IP datagram ; At the link layer, a frame carries the network-layer packet (an IP datagram) as its payload.
-16. 
+15. What is encapsulated within a frame at link layer = IP datagram ; At the link layer, a frame carries the network-layer packet (an IP datagram) as its payload. --- progress 19:22, 13/100 ----
+16. How many **bits** is the **mac address** = 48 bits long
+17. Method of socket module to assosciate host, port with socjeTo associate a host (IP) and a port with a specific socket in Python, use socket.bind((IP, PORT)) (i.e., the bind(IP,PORT) option).
+18. WITF UDP's **checksum** = detect errors in transmitted segement
+19. WITF tcp **3way** handshake **=** to establish connection and set the connection parameters
+20. Considering ISO osi stack what is the layer numb of physical layer = 1
+21. WIT slotted aloha = time is divided into equal-size slots.
+22. Which technique is used for error detection = Cyclic Redundancy Check (CRC)
+23. What technique is used for transition from ipv4 to ipv6 = Tunneling; carrying an IPv6 datagram as payload inside an IPv4 datagram across IPv4 routers
+24. consider ISO stack what is layer number of application layer = 7
+25. which method of socket module allow server socket to accept request from client socket from another host = socket.accept()
+26. WIT FDMA (Frequency Division Multiple Access) = each station assigned fixed frequency band
+27. Socket module method allow to send data to a given address = socket.sendto(data, address)
+28. WIT http = HTTP connection can be both persistent and non-persisten
+29. WIT unicast = this type of information transfer is useful when there is a participation of single sender and single recipient
+30. WIT direct limited broadcast = this is useful when a device in one network wants to transfer packet stream to all the devices over the other network
+    1. Types of broadcast = multicast (one/more sender to one/more receipent), unicast (one2one), direct limited (one to many)
+31. what is purpose of link layer = Transferring data between adjacent nodes in a network.
+32. what is TCP sequence number = byte stream number of first byte in segment’s data, sequence number counts bytes NOT segment
+33. key benefit of MPLS (multiprotocol label switching) = It allows high-speed IP forwarding
+34. when queue buffer fill up the packet is = dropped
+35. what is NOT common intra AS (autonomous system) routing protocol = Time division multiple access. -- progress 18/01/25 01:10  32 / 100 ---
 
 
 ---
