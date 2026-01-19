@@ -260,9 +260,9 @@ Chapter 15 -- congestion control
 
 Question review 17/01/25
 
-Batches upload wont work, need to review individually 
+Batches upload wont work, need to review individually
 
-Whatsapp direct review with perplexity, WIT = what is true when talking about [concept] question type, WITF = what is the function 
+Whatsapp direct review with perplexity, WIT = what is true when talking about [concept] question type, WITF = what is the function, NCQ = numbers calculation question, SRA = select right answers, WH = what happens
 
 1. Taking turns protocol on MAC protocol true statement = Master node invites other nodes to transmit in turn
 2. WIT direct broadcast = direct broadcast is useful when a device in one network wants to transfer packet stream to all the devices over the other network
@@ -277,7 +277,7 @@ Whatsapp direct review with perplexity, WIT = what is true when talking about [c
 11. Application layer protocol to download an email from mailbox server to client = POP (used for retrieving/downloading mail to the client)
 12. what is Throughput = rate (bits/time unit) at which bits are being sent from sender to receiver
 13. What is purpose of multiplexing in **transport** layer = To handle data from multiple sockets for transmission
-14. what information does an IMCP message when reporting error = Type, code, and the first 8 bytes of the IP datagram causing the error.
+14. what information does an **IMCP** **message** when reporting error = Type, code, and the first 8 bytes of the IP datagram causing the error.
 15. What is encapsulated within a frame at link layer = IP datagram ; At the link layer, a frame carries the network-layer packet (an IP datagram) as its payload. --- progress 19:22, 13/100 ----
 16. How many **bits** is the **mac address** = 48 bits long
 17. Method of socket module to assosciate host, port with socjeTo associate a host (IP) and a port with a specific socket in Python, use socket.bind((IP, PORT)) (i.e., the bind(IP,PORT) option).
@@ -300,11 +300,43 @@ Whatsapp direct review with perplexity, WIT = what is true when talking about [c
 33. key benefit of MPLS (multiprotocol label switching) = It allows high-speed IP forwarding
 34. when queue buffer fill up the packet is = dropped
 35. what is NOT common intra AS (autonomous system) routing protocol = Time division multiple access. -- progress 18/01/25 01:10  32 / 100 ---
-
+36. Bandwidth is = amount of data that can be transmitted in a fixed amount of time
+    1. bandwidth != Throughput ; Throughput = ACTUAL data rate achieved in practice
+37. NCQ; between two hosts H1 and H2, intended = 10 bits from H1 to router R1, timedelay = 5 sec/bit, distance or length L1 = 20 mt, propagation speed = 2 mt/sec, how long till packet arrives at router R2 = short answer 60 seconds
+    1. Tranmission delay R1 to R2 = 10 bits x 5 sec = 50 sec
+    2. Propagation delay = distance // speed = 20 // 2 = 10 sec
+    3. Total delay or time = 50 + 10 = 60
+38. correct HTTP method to delete a resource in a RESTful web service = DELETE
+    1. restful web services support total client-server separation
+39. What network address class reserved for multicast groups and not assignable individually = IPv4 Class D  is reserved for multicast groups and is not assignable to individual hosts
+40. NCQ; intended packet length = 20 bits H2 to R1, time = 10 second / 1 bit, link distance = 20 mt, propagation speed = 10 mt / sec
+    1. transdelay = 20 x 10 = 200 seconds
+    2. prop delay = 20 / 10 = 2 second
+    3. total = 202 seconds --- progress 13:56 pg 41 /100 ---
+41. WIT client-server model = computers provide resources and offer services to other computers
+42. SRA Dynamic Adaptive Streaming (DAS) =
+    1. Each chunk is **encoded** at multiple different rates → server
+    2. Periodically **estimates** server-to-client bandwidth → client
+    3. **Divides** video file into multiple chunks → server.
+43. WIT HTTP = http is stateless
+44. WIT **cookies** = Websites and client browser use cookies to maintain some state between transactions
+45. what information does ICMP **error message** include = ype, code, and the first 8 bytes of the IP datagram causing the error.
+46. WH when switch receive frame with destination mac address not on its table = it broadcast the frame on all interfaces except the one it arrived on
+47. What is hot potato routing = A routing strategy based on the lowest intra-AS cost.
+48. How does ipv6 address ipv4 limitation = using a much larger 128-bit address space -- 83 / 100 --
+49. WH if a frame with error is detected at link layer = it is dropped or retransmitted
+50. Client wants to **send** a http request message to a website over a given port, to a pathname to receive a json body (packet) = use **POST** protocol
+    1. POST /feedrss HTTP \r\n Host: replubblica.it \r\n content-type \r\n content-length \r\n
+51. role of MAN = network that connects two or more computers that are apart but reside in the same or different cities,
+52. [incomplete question] given transport layer scenario image with three connectionless hosts, what are the tuples required by the segments? = The required tuple for each connectionless (UDP-over-IP) segment is (source IP, source port, destination IP, destination port)
+53. WIT peer to peer (p2p) = computers have both the client and server roles at the same time
+54. WIT simplex = communication is unidirectional, as on a one-way street
+55. MAC and ip diff = mac unique to device, ip depends on location
+    1. mac address is 48 bits long, ip is 32 or 128
+56. what is Cumulative acknowledgement in TCP = Acknowledging all segments up to and including a specific sequence number.
+57. WIT 'Time to live' header field in IP datagram = It can be used to prevent packet looping. --progress 100/100 done
 
 ---
-
-
 
 ########
 
