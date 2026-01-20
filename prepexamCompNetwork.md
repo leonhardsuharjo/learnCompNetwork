@@ -262,7 +262,7 @@ Question review 17/01/25
 
 Batches upload wont work, need to review individually
 
-Whatsapp direct review with perplexity, WIT = what is true when talking about [concept] question type, WITF = what is the function, NCQ = numbers calculation question, SRA = select right answers, WH = what happens
+Whatsapp direct review with perplexity, WIT = what is true when talking about [concept] question type, WITF = what is the function, NCQ = numbers calculation question, SRA = select right answers, WH = what happens, CQ = coding question
 
 1. Taking turns protocol on MAC protocol true statement = Master node invites other nodes to transmit in turn
 2. WIT direct broadcast = direct broadcast is useful when a device in one network wants to transfer packet stream to all the devices over the other network
@@ -289,11 +289,12 @@ Whatsapp direct review with perplexity, WIT = what is true when talking about [c
 23. What technique is used for transition from ipv4 to ipv6 = Tunneling; carrying an IPv6 datagram as payload inside an IPv4 datagram across IPv4 routers
 24. consider ISO stack what is layer number of application layer = 7
 25. which method of socket module allow server socket to accept request from client socket from another host = socket.accept()
-26. WIT FDMA (Frequency Division Multiple Access) = each station assigned fixed frequency band
-27. Socket module method allow to send data to a given address = socket.sendto(data, address)
+26. WIT **FDMA** (Frequency Division Multiple Access) = each station assigned fixed frequency band
+27. Socket module method allow to send data to a given address = socket.sendto**(data, address)**
 28. WIT http = HTTP connection can be both persistent and non-persisten
 29. WIT unicast = this type of information transfer is useful when there is a participation of single sender and single recipient
 30. WIT direct limited broadcast = this is useful when a device in one network wants to transfer packet stream to all the devices over the other network
+
     1. Types of broadcast = multicast (one/more sender to one/more receipent), unicast (one2one), direct limited (one to many)
 31. what is purpose of link layer = Transferring data between adjacent nodes in a network.
 32. what is TCP sequence number = byte stream number of first byte in segment’s data, sequence number counts bytes NOT segment
@@ -301,20 +302,25 @@ Whatsapp direct review with perplexity, WIT = what is true when talking about [c
 34. when queue buffer fill up the packet is = dropped
 35. what is NOT common intra AS (autonomous system) routing protocol = Time division multiple access. -- progress 18/01/25 01:10  32 / 100 ---
 36. Bandwidth is = amount of data that can be transmitted in a fixed amount of time
+
     1. bandwidth != Throughput ; Throughput = ACTUAL data rate achieved in practice
 37. NCQ; between two hosts H1 and H2, intended = 10 bits from H1 to router R1, timedelay = 5 sec/bit, distance or length L1 = 20 mt, propagation speed = 2 mt/sec, how long till packet arrives at router R2 = short answer 60 seconds
+
     1. Tranmission delay R1 to R2 = 10 bits x 5 sec = 50 sec
     2. Propagation delay = distance // speed = 20 // 2 = 10 sec
     3. Total delay or time = 50 + 10 = 60
 38. correct HTTP method to delete a resource in a RESTful web service = DELETE
+
     1. restful web services support total client-server separation
 39. What network address class reserved for multicast groups and not assignable individually = IPv4 Class D  is reserved for multicast groups and is not assignable to individual hosts
 40. NCQ; intended packet length = 20 bits H2 to R1, time = 10 second / 1 bit, link distance = 20 mt, propagation speed = 10 mt / sec
+
     1. transdelay = 20 x 10 = 200 seconds
     2. prop delay = 20 / 10 = 2 second
     3. total = 202 seconds --- progress 13:56 pg 41 /100 ---
 41. WIT client-server model = computers provide resources and offer services to other computers
 42. SRA Dynamic Adaptive Streaming (DAS) =
+
     1. Each chunk is **encoded** at multiple different rates → server
     2. Periodically **estimates** server-to-client bandwidth → client
     3. **Divides** video file into multiple chunks → server.
@@ -326,15 +332,36 @@ Whatsapp direct review with perplexity, WIT = what is true when talking about [c
 48. How does ipv6 address ipv4 limitation = using a much larger 128-bit address space -- 83 / 100 --
 49. WH if a frame with error is detected at link layer = it is dropped or retransmitted
 50. Client wants to **send** a http request message to a website over a given port, to a pathname to receive a json body (packet) = use **POST** protocol
+
     1. POST /feedrss HTTP \r\n Host: replubblica.it \r\n content-type \r\n content-length \r\n
 51. role of MAN = network that connects two or more computers that are apart but reside in the same or different cities,
 52. [incomplete question] given transport layer scenario image with three connectionless hosts, what are the tuples required by the segments? = The required tuple for each connectionless (UDP-over-IP) segment is (source IP, source port, destination IP, destination port)
 53. WIT peer to peer (p2p) = computers have both the client and server roles at the same time
 54. WIT simplex = communication is unidirectional, as on a one-way street
 55. MAC and ip diff = mac unique to device, ip depends on location
+
     1. mac address is 48 bits long, ip is 32 or 128
 56. what is Cumulative acknowledgement in TCP = Acknowledging all segments up to and including a specific sequence number.
-57. WIT 'Time to live' header field in IP datagram = It can be used to prevent packet looping. --progress 100/100 done
+57. WIT 'Time to live' header field in IP datagram = It can be used to prevent packet looping. --progress 100/100 done --
+58. --- Review 19/01/26 start 1/45--- what is function of ARP table in a host = To store a mapping of IP addresses to MAC addresses
+59. Primary goal of Network address translation = Allow multiple devices to share a single public IP address
+60. WIT HTTP = HTTP connection can be both persistent and non-persistent.
+61. what is the **DNS server** responsible for .com and toplevel country domain = Top‑Level domain server ; other types like Root DNS servers (The “starting point” when no answer for resolver yet), Authoritative DNS servers (The final form like amazon.com), local dns or web cache (Local The DNS server your host contacts first, cache dns address)
+62. which protocol to map IP address to MAC address in LAN = ARP (Address Resolution Protocol).
+63. what is the goal operation of **NETCONF** protocol = Manage and configure devices network-wide
+64. IPv4 format, number of networks allowed under **class C** addresses = 2^21 ; class address includes class A to E
+65. VLAN acronym meaning = virtual local area network
+66. Adv of **centralized control plane** = easier network management
+67. WIT **half duplex** = it is used in cases where there is no need for communication in both directions at the same time.
+68. SDN acronym = software defined networking
+69. WIT LAN = group of comp and dev connected by switch or stack of em using a pivate addressng scheme TCP Ip protocol
+70. UDP = unreliable and connectionless
+71. IPv4 format, number of networks allowed under **class A** addresses = 2^7
+72. CQ, send http request to /products to make pizza in shopping list = code structure protocol + hostname + pathname
+73. what does DHCP provide to client device = IP address and configuration information.
+74. protocol used for routing between ISP = Border Gateway Protocol (BGP)
+75. In the **OSI model, the layers (top → bottom)** are: Application (7), Presentation (6), Session (5), Transport (4), Network (3), Link/Data Link (2), Physical (1) ; in the internet model its the opposite starting from application to physical (5)
+76. which field in tcp header is used for **flow control** = receive window --- 145 questions review done --- 
 
 ---
 
