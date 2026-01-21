@@ -129,7 +129,7 @@ Chapter 1: Network fundamentals =
 
 Chapter two -- network model and architecture
 
-1. chap 2.1 **ISO/OSI Reference Model** (7 Layers) -- down to top -- sometimes can be 5 layers
+1. chap 2.1 **ISO/OSI Reference Model** (7 Layers) -- down to top, down being electrical hardware
 
    1. Physical = Transmission of raw bits over physical medium, hardware
    2. Data link = Frame formatting and delivery between adjacent nodes, Hardware addressing (MAC addresses)
@@ -150,9 +150,9 @@ Chapter two -- network model and architecture
 Chapter three Network Transmission and Configuration
 
 1. Chap 3.1 transmission mode
-   1. Simplex (Unidirectional) = Communication in one direction only, One device transmits, other only receives, Examples: Keyboard-monitor
-   2. Half-Duplex (Bidirectional, Not Simultaneous) = Both devices can transmit and receive, but not simultaneously, Devices take turns transmitting, example walkie talkie
-   3. Full-Duplex (Bidirectional, Simultaneous) = Both devices transmit and receive simultaneously, Capacity divided between two directions, example modern phone
+   1. **Simplex** (Unidirectional) = Communication in one direction only, One device transmits, other only receives, Examples: Keyboard-monitor
+   2. **Half-Duplex** (Bidirectional, Not Simultaneous) = Both devices can transmit and receive, but not simultaneously, Devices take turns transmitting, example walkie talkie
+   3. **Full-Duplex** (Bidirectional, Simultaneous) = Both devices transmit and receive simultaneously, Capacity divided between two directions, example modern phone
 2. Chap 3.2 Line config -- [**skip first to key chapters]**
 
 Chapter twelve - Transport layer overview
@@ -260,9 +260,7 @@ Chapter 15 -- congestion control
 
 Question review 17/01/25
 
-Batches upload wont work, need to review individually
-
-Whatsapp direct review with perplexity, WIT = what is true when talking about [concept] question type, WITF = what is the function, NCQ = numbers calculation question, SRA = select right answers, WH = what happens, CQ = coding question
+WIT = what is true when talking about [concept] question type, WITF = what is the function, NCQ = numbers calculation question, SRA = select right answers, WH = what happens, CQ = coding question
 
 1. Taking turns protocol on MAC protocol true statement = Master node invites other nodes to transmit in turn
 2. WIT direct broadcast = direct broadcast is useful when a device in one network wants to transfer packet stream to all the devices over the other network
@@ -274,7 +272,7 @@ Whatsapp direct review with perplexity, WIT = what is true when talking about [c
 8. What is subnet mask used for (in IP addressing) = to define network and host portions of an address
 9. How to send http request to create pizza = The code with r = requests.post(url, data=body, headers=headers) (the one using **POST** method with pathname='/products', JSON body {"pizza": 1, "water": 6}, and Content-Type: application/json headers)
 10. Primary use of djikstra algorithm = Calculate least cost path from a source node to all other nodes
-11. Application layer protocol to download an email from mailbox server to client = POP (used for retrieving/downloading mail to the client)
+11. Application layer protocol to **download** an email from mailbox server to client = POP (used for retrieving/downloading mail to the client)
 12. what is Throughput = rate (bits/time unit) at which bits are being sent from sender to receiver
 13. What is purpose of multiplexing in **transport** layer = To handle data from multiple sockets for transmission
 14. what information does an **IMCP** **message** when reporting error = Type, code, and the first 8 bytes of the IP datagram causing the error.
@@ -290,13 +288,13 @@ Whatsapp direct review with perplexity, WIT = what is true when talking about [c
 24. consider ISO stack what is layer number of application layer = 7
 25. which method of socket module allow server socket to accept request from client socket from another host = socket.accept()
 26. WIT **FDMA** (Frequency Division Multiple Access) = each station assigned fixed frequency band
-27. Socket module method allow to send data to a given address = socket.sendto**(data, address)**
+27. Socket **module method** allow to **send** data to a given address = **socket.sendto(data, address)**
 28. WIT http = HTTP connection can be both persistent and non-persisten
 29. WIT unicast = this type of information transfer is useful when there is a participation of single sender and single recipient
 30. WIT direct limited broadcast = this is useful when a device in one network wants to transfer packet stream to all the devices over the other network
 
-    1. Types of broadcast = multicast (one/more sender to one/more receipent), unicast (one2one), direct limited (one to many)
-31. what is purpose of link layer = Transferring data between adjacent nodes in a network.
+    1. **Types of broadcast** = multicast (one/more sender to one/more receipent), unicast (one2one), direct limited (one to many)
+31. what is **purpose of link layer** = Transferring data between adjacent nodes in a network.
 32. what is TCP sequence number = byte stream number of first byte in segment’s data, sequence number counts bytes NOT segment
 33. key benefit of MPLS (multiprotocol label switching) = It allows high-speed IP forwarding
 34. when queue buffer fill up the packet is = dropped
@@ -334,7 +332,7 @@ Whatsapp direct review with perplexity, WIT = what is true when talking about [c
 50. Client wants to **send** a http request message to a website over a given port, to a pathname to receive a json body (packet) = use **POST** protocol
 
     1. POST /feedrss HTTP \r\n Host: replubblica.it \r\n content-type \r\n content-length \r\n
-51. role of MAN = network that connects two or more computers that are apart but reside in the same or different cities,
+51. role of **WAN** = network that connects two or more computers that are apart but reside in the **same or different cities,**
 52. [incomplete question] given transport layer scenario image with three connectionless hosts, what are the tuples required by the segments? = The required tuple for each connectionless (UDP-over-IP) segment is (source IP, source port, destination IP, destination port)
 53. WIT peer to peer (p2p) = computers have both the client and server roles at the same time
 54. WIT simplex = communication is unidirectional, as on a one-way street
@@ -347,7 +345,7 @@ Whatsapp direct review with perplexity, WIT = what is true when talking about [c
 59. Primary goal of Network address translation = Allow multiple devices to share a single public IP address
 60. WIT HTTP = HTTP connection can be both persistent and non-persistent.
 61. what is the **DNS server** responsible for .com and toplevel country domain = Top‑Level domain server ; other types like Root DNS servers (The “starting point” when no answer for resolver yet), Authoritative DNS servers (The final form like amazon.com), local dns or web cache (Local The DNS server your host contacts first, cache dns address)
-62. which protocol to map IP address to MAC address in LAN = ARP (Address Resolution Protocol).
+62. which protocol to **map IP address** to MAC address in LAN = ARP (Address Resolution Protocol).
 63. what is the goal operation of **NETCONF** protocol = Manage and configure devices network-wide
 64. IPv4 format, number of networks allowed under **class C** addresses = 2^21 ; class address includes class A to E
 65. VLAN acronym meaning = virtual local area network
@@ -357,11 +355,16 @@ Whatsapp direct review with perplexity, WIT = what is true when talking about [c
 69. WIT LAN = group of comp and dev connected by switch or stack of em using a pivate addressng scheme TCP Ip protocol
 70. UDP = unreliable and connectionless
 71. IPv4 format, number of networks allowed under **class A** addresses = 2^7
+
+    1. Class A number is **lower** than class C
 72. CQ, send http request to /products to make pizza in shopping list = code structure protocol + hostname + pathname
-73. what does DHCP provide to client device = IP address and configuration information.
+73. what does **DHCP** provide to client device = IP address and configuration information.
 74. protocol used for routing between ISP = Border Gateway Protocol (BGP)
 75. In the **OSI model, the layers (top → bottom)** are: Application (7), Presentation (6), Session (5), Transport (4), Network (3), Link/Data Link (2), Physical (1) ; in the internet model its the opposite starting from application to physical (5)
-76. which field in tcp header is used for **flow control** = receive window --- 145 questions review done --- 
+76. which field in **tcp header** is used for **flow control** = receive window --- 145 questions review done ---
+77. -- review 21/01/25 final prep day -- WIT **TDMA** (Time Division Multiple Access) = time divided into equal slots ONLY
+78. Which protocol is commonly used for **routing** between ISPs? = BGP (Border Gateway Protocol)
+79. In the ISO stack, link layer is the 2nd layer.
 
 ---
 
